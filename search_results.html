@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Search Results</title>
+	</head>
+	<body>
+		<h1>Search Results</h1>	
+		{% if results %}	
+		<table>	
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Age</th>	
+			</tr>
+			{% for result in results %}
+			<tr>	
+				<td>{{ result[0] }}</td>
+				<td>{{ result[1] }}</td>	
+				<td>{{ result[2] }}</td>	
+			</tr>
+			{% endfor %}
+		</table>
+		{% else %}
+		<p>No results found.</p>	
+		{% endif %}
+	</body>
+</html>
